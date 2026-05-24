@@ -8,6 +8,7 @@ bool esUnNumeroValido = false;
 
 do
 {
+    //menu
     Console.WriteLine("Ingrese una opcion:");
     Console.WriteLine("1 - Sumar");
     Console.WriteLine("2 - Restar");
@@ -35,7 +36,7 @@ do
 do
 {
     esUnNumeroValido = false;
-    while(!esUnNumeroValido)
+    while(!esUnNumeroValido) //controla si el numero A es valido
     {
         Console.WriteLine("Ingrese el primer numero: ");
         Num1 = Console.ReadLine();
@@ -46,7 +47,7 @@ do
         }
     }
     esUnNumeroValido = false;
-    while(!esUnNumeroValido || numeroB == 0)
+    while(!esUnNumeroValido || numeroB == 0) //controla si el numero B es valido
     {
         Console.WriteLine("Ingrese el segundo numero: ");
         Num1 = Console.ReadLine();
@@ -56,13 +57,13 @@ do
             Console.WriteLine(Num1 +" no es un numero valido");
             
         }
-        if (numeroB == 0)
+        if (numeroB == 0) //controla si el numero B es 0
         {
             Console.WriteLine("No puede ser 0");
         }
     }
 
-    switch (opcion1)
+    switch (opcion1) //realiza las operaciones
     {
         case 1:
 
@@ -79,7 +80,7 @@ do
             break;
     }
     esUnNumeroValido = false;
-    while(!esUnNumeroValido)
+    while(!esUnNumeroValido)//controla si el numero A es valido
     {
         Console.WriteLine("Desea realizar otro calculo? si = 1, no = 0");
         Num1 = Console.ReadLine();
