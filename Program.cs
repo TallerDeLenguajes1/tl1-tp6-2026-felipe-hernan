@@ -3,6 +3,7 @@ int opcion1 = 0;
 int opcion2 = 0;
 decimal numeroA = 1;
 decimal numeroB = 1;
+decimal resultado;
 string Num1 = "";
 bool esUnNumeroValido = false;
 
@@ -69,17 +70,20 @@ do
     switch (opcion1) //realiza las operaciones
     {
         case 1:
-
-            Console.WriteLine("La suma es : "+(numeroA+numeroB));
+            resultado = numeroA+numeroB;
+            Console.WriteLine("La suma de "+numeroA.ToString()+" y "+numeroB.ToString() + " es igual a: "+resultado.ToString());
             break;
         case 2:
-            Console.WriteLine("La resta es : "+(numeroA-numeroB));
+            resultado = numeroA-numeroB;
+            Console.WriteLine("La resta de "+numeroA.ToString()+" y "+numeroB.ToString() + " es igual a: "+resultado.ToString());
             break;
         case 3:
-            Console.WriteLine("La multiplicacion es : "+(numeroA*numeroB));
+            resultado = numeroA*numeroB;
+            Console.WriteLine("La multiplicacion de "+numeroA.ToString() +" y " + numeroB.ToString()+ " es igual a: "+ resultado.ToString());
             break;
         case 4:
-            Console.WriteLine("La divicion es : "+(numeroA/numeroB));
+            resultado = numeroA/numeroB;
+            Console.WriteLine("La divicion de "+numeroA.ToString()+" y "+numeroB.ToString()+" es igual a: "+resultado.ToString());
             break;
     }
     esUnNumeroValido = false;
