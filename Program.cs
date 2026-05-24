@@ -50,6 +50,8 @@ foreach (var item in nuevaCadena) //escribe las subcadenas
 }
 decimal numeroA = 0;
 decimal numeroB = 0;
+decimal resultado = 0;
+
 bool esUnNumeroValido;
 char operacion =' ';
 string aux = " ";
@@ -75,16 +77,20 @@ esUnNumeroValido = decimal.TryParse(aux,out numeroB);
 switch (operacion) //realiza las operaciones
 {
     case '+':
-        Console.WriteLine("La suma es : "+(numeroA+numeroB));
+        resultado = numeroA+numeroB;
+        Console.WriteLine("La suma de "+numeroA.ToString()+" y "+numeroB.ToString() + " es igual a: "+resultado.ToString());
         break;
     case '-':
-        Console.WriteLine("La resta es : "+(numeroA-numeroB));
+        resultado = numeroA*numeroB;
+        Console.WriteLine("La multiplicacion de "+numeroA.ToString() +" y " + numeroB.ToString()+ " es igual a: "+ resultado.ToString());
         break;
     case '*':
-        Console.WriteLine("La multiplicacion es : "+(numeroA*numeroB));
+        resultado = numeroA*numeroB;
+        Console.WriteLine("La multiplicacion de "+numeroA.ToString() +" y " + numeroB.ToString()+ " es igual a: "+ resultado.ToString());
         break;
     case '/':
-        Console.WriteLine("La divicion es : "+(numeroA/numeroB));
+        resultado = numeroA/numeroB;
+        Console.WriteLine("La divicion de "+numeroA.ToString()+" y "+numeroB.ToString()+" es igual a: "+resultado.ToString());
         break;
 }
 
