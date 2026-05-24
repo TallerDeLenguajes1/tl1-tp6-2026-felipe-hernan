@@ -48,7 +48,7 @@ while(!esUnNumeroValido) //controla si el numero es valido
 {
         Console.WriteLine("Ingrese otro numero:");
         Num1 = Console.ReadLine();
-        esUnNumeroValido = float.TryParse(Num1,out numeroA);
+        esUnNumeroValido = float.TryParse(Num1,out numeroB);
         if (!esUnNumeroValido)
         {
             Console.WriteLine(Num1 +" no es un numero valido");
