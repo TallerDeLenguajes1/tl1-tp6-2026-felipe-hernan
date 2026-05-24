@@ -44,8 +44,10 @@ do
         if (!esUnNumeroValido)
         {
             Console.WriteLine(Num1 +" no es un numero valido");
+                
         }
     }
+
     esUnNumeroValido = false;
     while(!esUnNumeroValido || numeroB == 0) //controla si el numero B es valido
     {
@@ -55,13 +57,14 @@ do
         if (!esUnNumeroValido)
         {
             Console.WriteLine(Num1 +" no es un numero valido");
-            
+                
         }
         if (numeroB == 0) //controla si el numero B es 0
         {
             Console.WriteLine("No puede ser 0");
         }
     }
+    
 
     switch (opcion1) //realiza las operaciones
     {
@@ -90,5 +93,74 @@ do
             Console.WriteLine(Num1 +" no es un numero valido");
         }
     }
-
 } while (opcion2 == 1);
+
+esUnNumeroValido = false;
+while(!esUnNumeroValido) //controla si el numero es valido
+{
+        Console.WriteLine("Ingrese un numero:");
+        Num1 = Console.ReadLine();
+        Console.WriteLine(Num1);
+        esUnNumeroValido = decimal.TryParse(Num1,out numeroA);
+        if (!esUnNumeroValido)
+        {
+            Console.WriteLine(Num1 +" no es un numero valido");
+        }
+}
+Console.WriteLine("Valor absoluto de : "+numeroA +" es : "+Math.Abs(numeroA));
+Console.WriteLine("El cuadrado de : "+numeroA +" es : "+Math.Pow((float)numeroA,2));
+
+if (numeroA<0) // controla si es numero positivo para calcular la raiz cuadrada
+{
+    Console.WriteLine("No es puede calcular la raiz, el numero es negativo");
+}
+else
+{
+    Console.WriteLine("La raiz cuadrada de : "+numeroA +" es : "+Math.Sqrt(Math.Abs((float)numeroA)));
+}
+
+Console.WriteLine("El seno de : "+numeroA +" es : "+Math.Sin((float)numeroA));
+Console.WriteLine("El coseno de : "+numeroA +" es : "+Math.Cos((float)numeroA));
+Console.WriteLine("La parte entera de "+numeroA +" es : "+(int)numeroA);
+
+esUnNumeroValido = false;
+while(!esUnNumeroValido) //controla si el numero es valido
+{
+    Console.WriteLine("Ingrese otro numero:");
+    Num1 = Console.ReadLine();
+    esUnNumeroValido = decimal.TryParse(Num1,out numeroA);
+    if (!esUnNumeroValido)
+    {
+        Console.WriteLine(Num1 +" no es un numero valido");
+    }
+}
+
+
+esUnNumeroValido = false;
+while(!esUnNumeroValido) //controla si el numero es valido
+{
+    Console.WriteLine("Ingrese otro numero:");
+    Num1 = Console.ReadLine();
+    esUnNumeroValido = decimal.TryParse(Num1,out numeroB);
+    if (!esUnNumeroValido)
+    {
+        Console.WriteLine(Num1 +" no es un numero valido");
+    }
+}
+
+
+
+if (numeroA<numeroB) // encuentra el numero maximo y minimo
+{
+    Console.WriteLine("El numero "+numeroA+" es el minimo");
+    Console.WriteLine("El numero "+numeroB+" es el maximo");
+}
+else if (numeroA>numeroB)
+{
+    Console.WriteLine("El numero "+numeroA+" es el maximo");
+    Console.WriteLine("El numero "+numeroB+" es el minimo");
+}
+else
+{
+    Console.WriteLine("Los numeros son iguales");
+}
